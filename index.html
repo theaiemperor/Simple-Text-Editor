@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Text Editor</title>
+	<link href="./css/index.css" rel="stylesheet">
+	<link href="./css/navbar.css" rel="stylesheet">
+	<link href="./css/sideBar.css" rel="stylesheet">
+	<link href="./css/coloris.min.css" rel="stylesheet">
+	<link href="./src/logo.png" rel="icon" type="image/png">
+
+</head>
+<body>
+<div id="container">
+	<div id="navbar">
+		<div id="title">
+			<img alt="logo" height="40" src="./src/logo.png" width="50">
+			Welcome To Simple Text Editor
+		</div>
+	</div>
+
+	<div id="editingArea">
+		<div contenteditable="true" id="textAreaInput">
+		</div>
+		<div id="sideBar">
+			<div class="sidebarProperties" id="selectFont">
+				<label for="FontSelect">Select Font</label>
+				<select class="propertyInput" id="FontSelect" name="fruits">
+				</select>
+			</div>
+			<div class="sidebarProperties" id="selectSize">
+				<label for="SizeSelect">
+					<div>Select Size</div>
+					<input class="propertyInput" id="SizeSelect" type="number" value="15"/>
+				</label>
+			</div>
+
+			<div class="sidebarProperties" id="selectColor">
+				<label for="ColorSelect">
+					<div>Select Color</div>
+					<input class="propertyInput" data-coloris id="ColorSelect" value="#000000" width="full"/>
+				</label>
+			</div>
+			<div class="sidebarProperties" id="selectLetterSpacing">
+				<label for="letterSpaceSelect">
+					<div>Select Letter spacing</div>
+					<input class="propertyInput" id="letterSpaceSelect" type="number" value="1"/>
+				</label>
+			</div>
+
+			<div class="sidebarProperties" id="selectBackGround">
+				<label for="backGroundSelect">
+					<div>Select BackGround Color</div>
+					<input class="propertyInput" data-coloris id="backGroundSelect" value="#ffffffff" width="full"/>
+				</label>
+			</div>
+			<div class="sidebarProperties" id="selectPadding">
+				<label for="paddingSelect">
+					<div>Select Paragraph padding</div>
+					<input class="propertyInput" id="paddingSelect" type="number" value="5"/>
+				</label>
+			</div>
+
+			<div class="sidebarProperties">
+				<div>Select Font Property</div>
+				<div class="buttonContainer">
+					<div class="buttons" id="boldButton">
+						<b>B</b>
+					</div>
+					<div class="buttons" id="italicButton">
+						<i>I</i>
+					</div>
+					<div class="buttons" id="underlineButton">
+						<u>U</u>
+					</div>
+				</div>
+			</div>
+
+			<div class="sidebarProperties" id="selectLineHeight">
+				<label for="lineHeightSelect">
+					<div>Select Line Spacing</div>
+					<input class="propertyInput" id="lineHeightSelect" type="number" value="1"/>
+				</label>
+			</div>
+
+			<div class="sidebarProperties" id="selectAlign">
+				<div>Select Text Alignment</div>
+				<div class="buttonContainer">
+					<div class="buttons" id="leftAlign">
+						<svg class="bi bi-justify-left" fill="currentColor" height="16" viewBox="0 0 16 16"
+						     width="16" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"
+							      fill-rule="evenodd"/>
+						</svg>
+					</div>
+					<div class="buttons" id="centerAlign">
+						<svg class="bi bi-justify" fill="currentColor" height="16" viewBox="0 0 16 16"
+						     width="16" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"
+							      fill-rule="evenodd"/>
+						</svg>
+					</div>
+					<div class="buttons" id="rightAlign">
+						<svg class="bi bi-justify-right" fill="currentColor" height="16" viewBox="0 0 16 16"
+						     width="16" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"
+							      fill-rule="evenodd"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+<script src="./js/index.js"></script>
+<script src="./js/coloris.min.js"></script>
+</html>
