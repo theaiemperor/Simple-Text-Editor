@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -16,8 +17,23 @@ html, body {
     margin-bottom: 23px;
 }
 
+#title {
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    align-items: center;
+}
+
 
 /* Second Row */
+#sideBarIcon {
+    cursor: pointer;
+    text-align: right;
+    display: none;
+    margin-right: 12px;
+}
+
+/* Third Row */
 
 #editingArea {
     border-radius: 15px;
@@ -25,6 +41,7 @@ html, body {
     display: flex;
     height: 90%;
     justify-content: space-between;
+    width: 100%;
 }
 
 #textAreaInput {
@@ -32,21 +49,71 @@ html, body {
     border-radius: 12px;
     margin-right: 12px;
     overflow: auto;
-    width: 75%;
+    width: 100%;
 }
 
 #sideBar {
     height: initial;
-    overflow: auto;
+    overflow-y: auto;
     background-color: #b2b27b;
-    border-radius: 13px;
-    max-width: fit-content;
-
-}
-
-#title {
     display: flex;
     justify-content: center;
-    padding: 3px;
     align-items: center;
+    border-radius: 13px;
+    width: 100%;
+    max-width: 300px;
+}
+
+@media only screen and (max-width:800px) {
+    #title {
+        font-size: 15px;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #sideBarIcon {
+        display: block;
+    }
+
+    #sideBar {
+        position: absolute;
+        right: 12px;
+        display: none;
+        height: 500px;
+        max-width: 300px;
+    }
+
+    #textAreaInput {
+        width: 100%;
+
+    }
+}
+
+@media (min-width: 801px) {
+  #sideBar {
+    display: block !important;
+  }
+}
+
+
+
+/* Forth Row */
+
+#notAvailable {
+    display: none;
+}
+
+@media only screen and (max-width:200px) {
+
+    #container {
+        display: none;
+    }
+
+    #notAvailable {
+        display: block;
+    }
+
 }

@@ -12,6 +12,8 @@ const rightAlign = document.getElementById('rightAlign')
 const letterSpacing = document.getElementById('letterSpaceSelect')
 const lineSpacing = document.getElementById('lineHeightSelect')
 const padding = document.getElementById('paddingSelect')
+const sideBarIcon = document.getElementById('sideBarIcon')
+const sideBar = document.getElementById('sideBar')
 
 
 const commonProperties = {
@@ -147,4 +149,8 @@ textArea.addEventListener('click',(e)=>{
         textArea.innerText = "";
         firstTime = false;
     }
+})
+
+sideBarIcon.addEventListener('click',()=>{
+    sideBar.style.display = sideBar.style.display==='none'?'block':'none';
 })
